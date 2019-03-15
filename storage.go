@@ -33,7 +33,7 @@ func (storage *StoragePostgres) AddEvent(event *Event) error {
 
 	if !exists {
 		category = &Category{
-			IdCategory: GenUI(),
+			IdCategory: genUI(),
 			Name:       event.Category,
 		}
 
@@ -50,7 +50,7 @@ func (storage *StoragePostgres) AddEvent(event *Event) error {
 
 	if !exists {
 		action = &Action{
-			IdAction: GenUI(),
+			IdAction: genUI(),
 			Name:     event.Action,
 		}
 
@@ -65,7 +65,7 @@ func (storage *StoragePostgres) AddEvent(event *Event) error {
 	}
 
 	// event
-	event.IdEvent = GenUI()
+	event.IdEvent = genUI()
 	event.FkCategory = category.IdCategory
 	event.FkAction = action.IdAction
 

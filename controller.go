@@ -2,7 +2,6 @@ package tracking
 
 import (
 	"encoding/json"
-	"shop-backend/utils"
 
 	"github.com/joaosoft/validator"
 	"github.com/joaosoft/web"
@@ -33,7 +32,7 @@ func (c *Controller) AddEventHandler(ctx *web.Context) error {
 	}
 
 	response, err := c.interactor.AddEvent(&Event{
-		IdEvent:   utils.GenUI(),
+		IdEvent:   genUI(),
 		Category:  request.Category,
 		Action:    request.Action,
 		Label:     request.Label,
