@@ -73,7 +73,7 @@
   branch = "master"
   name = "github.com/joaosoft/geo-location"
   packages = ["."]
-  revision = "9bce9666d53c85c0c6f2a2559dd430d6a00ebeb2"
+  revision = "56e48e75306548ae9d1161b29ed9780025780939"
 
 [[projects]]
   branch = "master"
