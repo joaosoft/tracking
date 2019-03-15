@@ -1,0 +1,38 @@
+{
+  "tracking": {
+    "host": "localhost:8001",
+    "token_key": "banana",
+    "dbr": {
+      "db": {
+        "driver": "postgres",
+        "datasource": "postgres://user:password@localhost:7000/postgres?sslmode=disable&search_path=tracking"
+      }
+    },
+    "geo-location": {
+      "api": "https://nominatim.openstreetmap.org",
+      "log": {
+        "level": "error"
+      }
+    },
+    "log": {
+      "level": "info"
+    },
+    "migration": {
+      "path": {
+        "database": "schema/db/postgres"
+      },
+      "db": {
+        "driver": "postgres",
+        "datasource": "postgres://user:password@localhost:7000/postgres?sslmode=disable&search_path=tracking"
+      },
+      "log": {
+        "level": "info"
+      }
+    }
+  },
+  "manager": {
+    "log": {
+      "level": "info"
+    }
+  }
+}
