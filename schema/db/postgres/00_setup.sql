@@ -33,6 +33,7 @@ CREATE TABLE "tracking"."event" (
 	longitude           NUMERIC(14, 11),
 	country             TEXT,
 	city                TEXT,
+	street              TEXT,
 	meta_data           JSONB,
 	created_at			TIMESTAMP NOT NULL DEFAULT NOW(),
 	FOREIGN KEY(fk_category) REFERENCES "tracking"."category"(id_category),

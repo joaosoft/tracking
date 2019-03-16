@@ -1,7 +1,7 @@
 # tracking
 [![Build Status](https://travis-ci.org/joaosoft/tracking.svg?branch=master)](https://travis-ci.org/joaosoft/tracking) | [![codecov](https://codecov.io/gh/joaosoft/tracking/branch/master/graph/badge.svg)](https://codecov.io/gh/joaosoft/tracking) | [![Go Report Card](https://goreportcard.com/badge/github.com/joaosoft/tracking)](https://goreportcard.com/report/github.com/joaosoft/tracking) | [![GoDoc](https://godoc.org/github.com/joaosoft/tracking?status.svg)](https://godoc.org/github.com/joaosoft/tracking)
 
-A simple tracking, counting for site events.
+A simple tracking and counting tool for site events. This is to be used for auditing.
 
 ## Support for 
 > Http
@@ -28,7 +28,12 @@ Body:
 	"action": "action",
 	"label": "label",
 	"value": 1,
-	"street": "rua particular de monsanto"
+	"street": "rua particular de monsanto",
+	"meta_data": {
+        "teste_1": "teste",
+        "teste_2": 1,
+        "teste_3": 1.1
+    }
 }
 ```
 
@@ -44,7 +49,12 @@ Body:
 	"label": "label",
 	"value": 1,
 	"latitude": 41.1718238,
-	"longitude": -8.6186277
+	"longitude": -8.6186277,
+	"meta_data": {
+        "teste_1": "teste",
+        "teste_2": 1,
+        "teste_3": 1.1
+    }
 }
 ```
 

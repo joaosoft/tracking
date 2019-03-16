@@ -31,6 +31,11 @@ func (c *Controller) AddEventHandler(ctx *web.Context) error {
 		return ctx.Response.JSON(web.StatusBadRequest, errs)
 	}
 
+	metadata, err := json.Marshal(request.MetaData)
+	if err != nil {
+		return ctx.Response.JSON(web.StatusBadRequest, err)
+	}
+
 	response, err := c.interactor.AddEvent(&Event{
 		IdEvent:   genUI(),
 		Category:  request.Category,
@@ -40,7 +45,7 @@ func (c *Controller) AddEventHandler(ctx *web.Context) error {
 		Latitude:  request.Latitude,
 		Longitude: request.Longitude,
 		Street:    request.Street,
-		MetaData:  request.MetaData,
+		MetaData:  string(metadata),
 	})
 	if err != nil {
 		return ctx.Response.JSON(web.StatusInternalServerError, ErrorResponse{Code: web.StatusInternalServerError, Message: err.Error()})
