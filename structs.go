@@ -41,6 +41,7 @@ type Event struct {
 	Country    *string   `json:"country" db:"country"`
 	City       *string   `json:"city" db:"city"`
 	Street     *string   `json:"street" db:"street"`
+	MetaData   *string   `json:"meta_data" db:"meta_data"`
 	CreatedAt  time.Time `json:"created_at" db.read:"created_at" db.write:"-"`
 }
 
