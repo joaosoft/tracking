@@ -30,10 +30,10 @@ Body:
 	"value": 1,
 	"street": "rua particular de monsanto",
 	"meta_data": {
-        "teste_1": "teste",
-        "teste_2": 1,
-        "teste_3": 1.1
-    }
+		"teste_1": "teste",
+		"teste_2": 1,
+		"teste_3": 1.1
+	}
 }
 ```
 
@@ -51,10 +51,10 @@ Body:
 	"latitude": 41.1718238,
 	"longitude": -8.6186277,
 	"meta_data": {
-        "teste_1": "teste",
-        "teste_2": 1,
-        "teste_3": 1.1
-    }
+		"teste_1": "teste",
+		"teste_2": 1,
+		"teste_3": 1.1
+	}
 }
 ```
 
