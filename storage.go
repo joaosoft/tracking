@@ -1,8 +1,6 @@
 package tracking
 
 import (
-	"fmt"
-
 	"github.com/joaosoft/dbr"
 )
 
@@ -69,13 +67,6 @@ func (storage *StoragePostgres) AddEvent(event *Event) error {
 	event.FkCategory = category.IdCategory
 	event.FkAction = action.IdAction
 
-	str, _ := storage.db.
-		Insert().
-		Into("event").
-		Record(event).
-		Build()
-
-	fmt.Println(str)
 	_, err = storage.db.
 		Insert().
 		Into("event").
