@@ -20,9 +20,16 @@ func NewController(config *TrackingConfig, interactor *Interactor) *Controller {
 }
 
 func (c *Controller) AddEventHandler(ctx *web.Context) error {
-	request := &AddEventRequest{}
+	request := AddEventRequest{}
 
-	err := json.Unmarshal(ctx.Request.Body, request)
+	// parameters on url
+	err := ctx.Request.BindParams(&request)
+	if err != nil {
+		return ctx.Response.JSON(web.StatusBadRequest, err)
+	}
+
+	// override parameters on body
+	err = ctx.Request.Bind(&request)
 	if err != nil {
 		return ctx.Response.JSON(web.StatusBadRequest, err)
 	}
@@ -46,8 +53,8 @@ func (c *Controller) AddEventHandler(ctx *web.Context) error {
 
 	response, err := c.interactor.AddEvent(&Event{
 		IdEvent:   genUI(),
-		Category:  request.Category,
-		Action:    request.Action,
+		Category:  *request.Category,
+		Action:    *request.Action,
 		Label:     request.Label,
 		Value:     request.Value,
 		Latitude:  request.Latitude,

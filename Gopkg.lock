@@ -97,13 +97,13 @@
   branch = "master"
   name = "github.com/joaosoft/validator"
   packages = ["."]
-  revision = "c5352df0ee28edcab95275820f561c1134a8b981"
+  revision = "3d2aa2dc8db7f41e5302252ed8a1fe20ad13e9fb"
 
 [[projects]]
   branch = "master"
   name = "github.com/joaosoft/web"
   packages = ["."]
-  revision = "2915f01acd7ffecdeade3f7b6f37b10db0f9679a"
+  revision = "a29bdf72f30cb89a1c85d0a9c8f72d92d2428d85"
 
 [[projects]]
   branch = "master"
@@ -189,8 +189,8 @@
     ".",
     "mem"
   ]
-  revision = "f4711e4db9e9a1d3887343acb72b2bbfc2f686f5"
-  version = "v1.2.1"
+  revision = "588a75ec4f32903aa5e39a2619ba6a4631e28424"
+  version = "v1.2.2"
 
 [[projects]]
   name = "github.com/spf13/cast"
@@ -241,7 +241,7 @@
     "acme",
     "acme/autocert"
   ]
-  revision = "b7391e95e576cacdcdd422573063bc057239113d"
+  revision = "a5d413f7728c81fb97d96a2b722368945f651e78"
 
 [[projects]]
   branch = "master"

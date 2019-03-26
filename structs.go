@@ -14,8 +14,8 @@ type ErrorResponse struct {
 }
 
 type AddEventRequest struct {
-	Category  string           `json:"category" validate:"notzero"`
-	Action    string           `json:"action" validate:"notzero"`
+	Category  *string          `json:"category" validate:"notzero"`
+	Action    *string          `json:"action" validate:"notzero"`
 	Label     *string          `json:"label"`
 	Value     *int64           `json:"value"`
 	Latitude  *float64         `json:"latitude"`
