@@ -6,7 +6,7 @@ import (
 )
 
 // TrackingOption ...
-type TrackingOption func(client *Tracking)
+type TrackingOption func(t *Tracking)
 
 // Reconfigure ...
 func (t *Tracking) Reconfigure(options ...TrackingOption) {
