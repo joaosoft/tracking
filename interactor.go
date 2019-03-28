@@ -17,7 +17,7 @@ type Interactor struct {
 
 func NewInteractor(service *Tracking, storageDB IStorageDB, geoLocation *geolocation.GeoLocation) *Interactor {
 	return &Interactor{
-		service:      service,
+		service:     service,
 		storage:     storageDB,
 		geoLocation: geoLocation,
 	}
@@ -25,7 +25,7 @@ func NewInteractor(service *Tracking, storageDB IStorageDB, geoLocation *geoloca
 
 func (i *Interactor) AddEvent(event *Event) (*AddEventResponse, error) {
 	i.service.logger.WithFields(map[string]interface{}{"method": "AddEvent"})
-	log.Infof("adding new event [action: %s]", event.Action)
+	log.Infof("adding new event [category: %s, action: %s]", event.Category, event.Action)
 
 	// load geo-localization
 	var searchResponse geolocation.SearchResponse
