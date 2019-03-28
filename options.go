@@ -39,7 +39,7 @@ func WithLogLevel(level logger.Level) TrackingOption {
 
 // WithManager ...
 func WithManager(mgr *manager.Manager) TrackingOption {
-	return func(session *Tracking) {
-		session.pm = mgr
+	return func(t *Tracking) {
+		t.pm = mgr
 	}
 }
