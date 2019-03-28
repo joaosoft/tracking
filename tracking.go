@@ -18,7 +18,7 @@ type Tracking struct {
 }
 
 // NewTracking ...
-func NewTracking(options ...SessionOption) (*Tracking, error) {
+func NewTracking(options ...TrackingOption) (*Tracking, error) {
 	config, simpleConfig, err := NewConfig()
 
 	service := &Tracking{
@@ -68,7 +68,7 @@ func NewTracking(options ...SessionOption) (*Tracking, error) {
 		return nil, err
 	}
 
-	interactor := NewInteractor(config.Tracking, storage, geolocation)
+	interactor := NewInteractor(service, storage, geolocation)
 
 	controller := NewController(config.Tracking, interactor)
 	controller.RegisterRoutes(web)
@@ -79,11 +79,11 @@ func NewTracking(options ...SessionOption) (*Tracking, error) {
 }
 
 // Start ...
-func (m *Tracking) Start() error {
-	return m.pm.Start()
+func (t *Tracking) Start() error {
+	return t.pm.Start()
 }
 
 // Stop ...
-func (m *Tracking) Stop() error {
-	return m.pm.Stop()
+func (t *Tracking) Stop() error {
+	return t.pm.Stop()
 }
