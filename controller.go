@@ -57,6 +57,8 @@ func (c *Controller) AddEventHandler(ctx *web.Context) error {
 		Action:    *request.Action,
 		Label:     request.Label,
 		Value:     request.Value,
+		Viewer:    request.Viewer,
+		Viewed:    request.Viewed,
 		Latitude:  request.Latitude,
 		Longitude: request.Longitude,
 		Street:    request.Street,
