@@ -29,6 +29,8 @@ CREATE TABLE "tracking"."event" (
 	fk_action  			TEXT NOT NULL,
 	label 				TEXT,
 	value              	INTEGER,
+	viewer              TEXT,
+	viewed              TEXT,
 	latitude            NUMERIC(14, 11),
 	longitude           NUMERIC(14, 11),
 	country             TEXT,

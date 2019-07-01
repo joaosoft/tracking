@@ -1,3 +1,6 @@
+env:
+	docker-compose up -d home.postgres
+
 run:
 	go run ./bin/launcher/main.go
 

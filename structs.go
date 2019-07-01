@@ -18,6 +18,8 @@ type AddEventRequest struct {
 	Action    *string          `json:"action" validate:"notzero"`
 	Label     *string          `json:"label"`
 	Value     *int64           `json:"value"`
+	Viewer    *string          `json:"viewer"`
+	Viewed    *string          `json:"viewed"`
 	Latitude  *float64         `json:"latitude"`
 	Longitude *float64         `json:"longitude"`
 	Street    *string          `json:"street"`
@@ -36,6 +38,8 @@ type Event struct {
 	FkAction   string    `json:"-" db:"fk_action"`
 	Label      *string   `json:"label" db:"label"`
 	Value      *int64    `json:"value" db:"value"`
+	Viewer     *string   `json:"viewer" db:"viewer"`
+	Viewed     *string   `json:"viewed" db:"viewed"`
 	Latitude   *float64  `json:"latitude" db:"latitude"`
 	Longitude  *float64  `json:"longitude" db:"longitude"`
 	Country    *string   `json:"country" db:"country"`
