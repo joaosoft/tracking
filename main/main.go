@@ -1,7 +1,7 @@
 package main
 
 import (
-	"tracking"
+	"github.com/joaosoft/tracking"
 )
 
 func main() {
